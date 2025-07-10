@@ -55,11 +55,11 @@ export default function About() {
         <p>Real moments from our events.</p>
         <div className="impact-images">
           <div className="impact-image">
-            <img src="https://i.imgur.com/gdHcZKk.jpg" alt="Volunteer and child high five" />
+            <img src="/images/child_haircut2.jpg" alt="Volunteer and child high five" />
             <p>It's amazing to see their confidence shine! #HairCare #ConfidenceBoost</p>
           </div>
           <div className="impact-image">
-            <img src="https://i.imgur.com/TUKsnQ6.jpg" alt="Foster youth transformation" />
+            <img src="/images/before_after.jpg" alt="Foster youth transformation" />
             <p>I love my new look! #Transformation #ThankYou</p>
           </div>
         </div>

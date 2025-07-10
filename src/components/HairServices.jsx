@@ -6,37 +6,37 @@ export default function HairServices() {
     {
       title: "Braiding",
       description: "Intricate and stylish braids for all hair types.",
-      image: "https://i.imgur.com/ghYcdPb.jpg",
+      image: "/images/braid.jpeg",
       tag: "Cultural Style"
     },
     {
       title: "Curls",
       description: "Hair curling services that add volume and flair.",
-      image: "https://i.imgur.com/7RgxEgm.jpg",
+      image: "/images/curlyhair.jpg",
       tag: "Volume Boost"
     },
     {
       title: "Trims",
       description: "Professional trims to maintain healthy ends.",
-      image: "https://i.imgur.com/NdDgMmn.jpg",
+      image: "/images/fresh_trim.jpeg",
       tag: "Maintenance"
     },
     {
       title: "Twists",
       description: "Protective styles to keep hair healthy and stylish.",
-      image: "https://i.imgur.com/bGHpN5r.jpg",
+      image: "/images/twists.jpg",
       tag: "Protective Styling"
     },
     {
       title: "Straightening",
       description: "Expert straightening for sleek, smooth looks.",
-      image: "https://i.imgur.com/Glk0oIL.jpg",
+      image: "/images/slick.png",
       tag: "Sleek Look"
     },
     {
       title: "Natural Styles",
       description: "Elevating natural beauty with various styles.",
-      image: "https://i.imgur.com/0v6rZgD.jpg",
+      image: "/images/natural.jpg",
       tag: "Natural & Beautiful"
     }
   ];
