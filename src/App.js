@@ -5,6 +5,7 @@ import Testimonials from './components/Testimonials';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Volunteer from './components/Volunteer';
 import Footer from './components/Footer';
+import HelpCenter from './components/HelpCenter';
 
 
 
@@ -22,6 +23,7 @@ function App() {
             </>
           } />
           <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/help" element={<HelpCenter />} />
         </Routes>
         <Footer />
       </div>
