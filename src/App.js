@@ -15,7 +15,7 @@ import HairServices from './components/HairServices';
 import HelpCenter from './components/HelpCenter';
 import ContactPage from './components/ContactPage';
 import Login from './components/Login';
-import Footer from './components/Footer';
+
 
 
 function App() {
@@ -46,7 +46,7 @@ function App() {
           <Route path="/helpcenter" element={<HelpCenter/>} />
           <Route path="/services" element={<HairServices />} />
         </Routes>
-        <Footer />
+  
       </div>
     </Router>
   );
