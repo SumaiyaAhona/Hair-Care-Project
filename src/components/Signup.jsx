@@ -11,7 +11,7 @@ export default function Signup() {
         <h1>New here?</h1>
         <p>Join our community of volunteers and foster partners!</p>
         <div className="signup-buttons">
-          <Link to="/signup/volunteer" className="btn-primary">
+          <Link to="/volunteer/signup" className="btn-primary">
             Sign Up as a Volunteer
           </Link>
           <Link to="/signup/agency" className="btn-secondary">
@@ -20,13 +20,12 @@ export default function Signup() {
         </div>
       </div>
 
-      {/* Hero image */}
       <div className="signup-image-wrapper">
-        <img
-          src="https://images.unsplash.com/photo-1598016204479-20f5682a1fa2?auto=format&fit=crop&w=800&q=80"
-          alt="Group of foster youth"
-        />
-      </div>
+  <img
+    src="/signup-hero.jpg"  // Note the leading slash
+    alt="Foster youth getting hair care"
+  />
+</div>
 
       {/* “Been here before?” section */}
       <div className="signup-section signup-return">

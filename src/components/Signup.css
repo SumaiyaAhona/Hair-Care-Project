@@ -94,17 +94,17 @@
     border-color: #9ca3af;
   }
   
-  /* Image wrapper */
   .signup-image-wrapper {
     width: 100%;
     max-width: 36rem;
     margin: 2rem 0;
+    text-align: center;
   }
   
   .signup-image-wrapper img {
     width: 100%;
     border-radius: 0.5rem;
-    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1),
                 0 4px 6px -2px rgba(0,0,0,0.05);
   }
   

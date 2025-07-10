@@ -1,4 +1,5 @@
 import './Hero.css';
+import { Link } from 'react-router-dom';
 
 export default function Hero() {
   return (
@@ -8,8 +9,8 @@ export default function Hero() {
           <h1>Boosting Confidence Through Quality Hair Care</h1>
           <p>Connecting foster youth with compassionate volunteer hairstylists.</p>
           <div className="hero-buttons">
-            <a href="#volunteer" className="btn btn-purple">Volunteer</a>
-            <a href="#care" className="btn btn-black">Get Care for your foster youth</a>
+            <Link to="/general/signup" className="btn btn-purple">Volunteer</Link>
+            <Link to="/general/signup" className="btn btn-black">Get Care for your foster youth</Link>
           </div>
         </div>
         <div className="hero-image">
