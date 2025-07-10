@@ -1,0 +1,76 @@
+.about-page {
+    font-family: system-ui, sans-serif;
+    padding: 3rem 1.5rem;
+    background-color: #ffffff;
+    color: #1f2937;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  section {
+    margin-bottom: 4rem;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  p {
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  .steps, .impact-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .step-card, .impact-card {
+    background: #f9f9f9;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 220px;
+    text-align: left;
+  }
+  
+  .impact-card span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .impact-images {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .impact-image img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-footer {
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    color: #777;
+  }
+  
+  .back-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  

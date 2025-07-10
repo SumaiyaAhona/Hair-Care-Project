@@ -10,6 +10,7 @@ import FosterProfile from './components/FosterProfile';
 import VolunteerAppointments from './components/VolunteerAppointments';
 import VolunteerProfile from './components/VolunteerProfile';
 import FosterSignup from './components/FosterSignup';
+import About from './components/About';
 import HairServices from './components/HairServices';
 import HelpCenter from './components/HelpCenter';
 import ContactPage from './components/ContactPage';
@@ -35,6 +36,7 @@ function App() {
           <Route path="/volunteer/signup" element={<Volunteer />} />
           <Route path="/signup/agency" element={<FosterSignup />} />
           <Route path="/general/signup" element={<SignUp />} />
+          <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
           <Route path="/foster/dashboard" element={<FosterParentDashboard />} />
           <Route path="/foster/profile" element={<FosterProfile />} />
