@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import Testimonials from './components/Testimonials';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Volunteer from './components/Volunteer';
+import SignUp from './components/Signup'; 
 
 
 
@@ -21,6 +22,7 @@ function App() {
             </>
           } />
           <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/signup" element={<SignUp />} />   {/* ← new route */}
         </Routes>
       </div>
     </Router>
