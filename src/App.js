@@ -1,4 +1,3 @@
-// src/App.js
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -7,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Volunteer from './components/Volunteer';
 import SignUp from './components/Signup';
 import FosterParentDashboard from './components/FosterParentDashboard';
+import FosterProfile from './components/FosterProfile';
 import Footer from './components/Footer';
 
 function App() {
@@ -25,8 +25,9 @@ function App() {
             }
           />
           <Route path="/volunteer" element={<Volunteer />} />
-          <Route path="/signup"    element={<SignUp />} />
+          <Route path="/signup" element={<SignUp />} />
           <Route path="/dashboard" element={<FosterParentDashboard />} />
+          <Route path="/profile" element={<FosterProfile />} />
         </Routes>
         <Footer />
       </div>
