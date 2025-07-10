@@ -1,85 +1,124 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import './Volunteer.css';
 
 export default function Volunteer() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    services: '',
-    availability: ''
+    password: '',
+    confirmPassword: '',
+    backgroundCheck: ''
   });
-  const [errors, setErrors] = useState({});
 
-  const validate = () => {
-    const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = 'Name is required';
-    if (!formData.email.trim()) {
-      newErrors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = 'Email is invalid';
-    }
-    if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
-    if (!formData.services.trim()) newErrors.services = 'Please specify your hair services';
-    if (!formData.availability.trim()) newErrors.availability = 'Availability is required';
-    return newErrors;
+  const handleChange = (e) => {
+    const { name, value, files } = e.target;
+    setFormData({
+      ...formData,
+      [name]: files ? files[0].name : value,
+    });
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const validationErrors = validate();
-    if (Object.keys(validationErrors).length > 0) {
-      setErrors(validationErrors);
-    } else {
-      console.log('Form submitted!', formData);
-      alert('Thank you for volunteering!');
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        services: '',
-        availability: ''
-      });
-      setErrors({});
+    if (formData.password !== formData.confirmPassword) {
+      alert("Passwords do not match.");
+      return;
     }
+    alert("Thank you for signing up!");
+    setFormData({
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      backgroundCheck: ''
+    });
   };
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleCancel = () => {
+    setFormData({
+      name: '',
+      email: '',
+      password: '',
+      confirmPassword: '',
+      backgroundCheck: ''
+    });
   };
 
   return (
-    <section className="volunteer-page">
-      <h2>Volunteer</h2>
-      <p>Sign up to offer your hair services and help foster youth feel confident and cared for.</p>
-      <form onSubmit={handleSubmit} noValidate>
-        <div className="form-group">
-          <label>Name</label>
-          <input name="name" value={formData.name} onChange={handleChange} />
-          {errors.name && <span className="error">{errors.name}</span>}
-        </div>
-        <div className="form-group">
-          <label>Email</label>
-          <input type="email" name="email" value={formData.email} onChange={handleChange} />
-          {errors.email && <span className="error">{errors.email}</span>}
-        </div>
-        <div className="form-group">
-          <label>Phone</label>
-          <input name="phone" value={formData.phone} onChange={handleChange} />
-          {errors.phone && <span className="error">{errors.phone}</span>}
-        </div>
-        <div className="form-group">
-          <label>Hair Services Offered</label>
-          <input name="services" value={formData.services} onChange={handleChange} />
-          {errors.services && <span className="error">{errors.services}</span>}
-        </div>
-        <div className="form-group">
-          <label>Availability</label>
-          <input name="availability" value={formData.availability} onChange={handleChange} />
-          {errors.availability && <span className="error">{errors.availability}</span>}
-        </div>
-        <button type="submit" className="btn-submit">Submit</button>
-      </form>
-    </section>
+    <div className="volunteer-signup-container">
+      <div className="left-column">
+        <h1>Signing up as a Volunteer</h1>
+        <p>Partner with us to provide hair care to those in need.</p>
+      </div>
+      <div className="right-column">
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label>Role</label>
+            <input type="text" value="Volunteer Stylist" disabled />
+            <small>Select your role to access the appropriate registration options.</small>
+          </div>
+          <div className="form-group">
+            <label>Full Name</label>
+            <input
+              name="name"
+              type="text"
+              placeholder="Enter your full name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Email</label>
+            <input
+              name="email"
+              type="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Password</label>
+            <input
+              name="password"
+              type="password"
+              placeholder="Create a password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Confirm Password</label>
+            <input
+              name="confirmPassword"
+              type="password"
+              placeholder="Re-enter your password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label>Upload Your Background Check</label>
+            <input
+              name="backgroundCheck"
+              type="file"
+              accept=".pdf,.jpg,.png"
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="button-group">
+            <button type="button" className="cancel-btn" onClick={handleCancel}>Cancel</button>
+            <button type="submit" className="submit-btn">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
+
