@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './VolunteerAppointments.css';
 
 function VolunteerAppointments() {
@@ -7,8 +8,8 @@ function VolunteerAppointments() {
       <div className="header">
         <h2>Browse Appointments</h2>
         <div className="header-links">
-          <a href="#">Back</a>
-          <a href="#">Profile</a>
+          <Link to="/volunteer/signup">Back</Link>
+          <Link to="/volunteer/profile">Profile</Link>
         </div>
       </div>
 
