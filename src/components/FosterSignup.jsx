@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './FosterSignup.css';
 
 export default function FosterSignup() {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -20,13 +22,12 @@ export default function FosterSignup() {
       alert("Passwords do not match.");
       return;
     }
+    if (!formData.email.endsWith('@sco.org')) {
+      alert("Only @sco.org emails are allowed for foster agencies.");
+      return;
+    }
     alert("Thank you for signing up!");
-    setFormData({
-      name: '',
-      email: '',
-      password: '',
-      confirmPassword: ''
-    });
+    navigate('/foster/dashboard');
   };
 
   const handleCancel = () => {
@@ -42,14 +43,14 @@ export default function FosterSignup() {
     <div className="foster-signup-container">
       <div className="left-column">
         <h1>Signing up as a Foster Agency/Parent</h1>
-        <p>Partner with us to provide hair care to those in need.</p>
+        <p>Only SCO Foster Care agencies are supported at this time.</p>
       </div>
       <div className="right-column">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Role</label>
             <input type="text" value="Foster Care Agency" disabled />
-            <small>Select your role to access the appropriate registration options.</small>
+            <small>Only @sco.org agency emails are accepted</small>
           </div>
           <div className="form-group">
             <label>Full Name</label>
@@ -67,12 +68,12 @@ export default function FosterSignup() {
             <input
               name="email"
               type="email"
-              placeholder="Enter your email"
+              placeholder="you@sco.org"
               value={formData.email}
               onChange={handleChange}
               required
             />
-            <small>Use your agency-issued email (e.g., @fosteragency.org) if registering as an agency.</small>
+            <small>Email must end in <strong>@sco.org</strong> to register</small>
           </div>
           <div className="form-group">
             <label>Password</label>

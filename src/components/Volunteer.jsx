@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Volunteer.css';
 
 export default function Volunteer() {
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,6 +35,7 @@ export default function Volunteer() {
       confirmPassword: '',
       backgroundCheck: ''
     });
+    navigate('/volunteer/appointments');
   };
 
   const handleCancel = () => {
@@ -121,4 +125,3 @@ export default function Volunteer() {
     </div>
   );
 }
-
