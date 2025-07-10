@@ -9,13 +9,13 @@ export default function Signup() {
       {/* “New here?” section */}
       <div className="signup-section">
         <h1>New here?</h1>
-        <p>Join our community of volunteers and make a difference!</p>
+        <p>Join our community of volunteers and foster partners!</p>
         <div className="signup-buttons">
           <Link to="/signup/volunteer" className="btn-primary">
-            Sign Up As a Volunteer
+            Sign Up as a Volunteer
           </Link>
           <Link to="/signup/agency" className="btn-secondary">
-            Sign Up As a Foster Partner
+            Sign Up as a Foster Partner
           </Link>
         </div>
       </div>
@@ -31,13 +31,10 @@ export default function Signup() {
       {/* “Been here before?” section */}
       <div className="signup-section signup-return">
         <h2>Been here before?</h2>
-        <p>Sign in!</p>
-        <div className="signup-buttons">
-          <Link to="/login/volunteer" className="btn-primary">
-            Sign In As a Volunteer
-          </Link>
-          <Link to="/login/agency" className="btn-secondary">
-            Sign In As a Foster Partner
+        <p>Sign in to your account</p>
+        <div className="signup-buttons single-button">
+          <Link to="/login" className="btn-secondary">
+            Sign In
           </Link>
         </div>
       </div>

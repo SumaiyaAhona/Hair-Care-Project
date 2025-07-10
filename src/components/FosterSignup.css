@@ -1,0 +1,82 @@
+.foster-signup-container {
+    display: flex;
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+    gap: 40px;
+  }
+  
+  .left-column {
+    flex: 1;
+    padding-top: 40px;
+  }
+  
+  .left-column h1 {
+    font-size: 2rem;
+    color: #111827;
+    margin-bottom: 10px;
+  }
+  
+  .left-column p {
+    color: #4b5563;
+  }
+  
+  .right-column {
+    flex: 1.2;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #d1d5db;
+  }
+  
+  .form-group small {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-top: 4px;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .cancel-btn {
+    padding: 12px 20px;
+    border: none;
+    background: #e5e7eb;
+    color: #1f2937;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn {
+    padding: 12px 20px;
+    border: none;
+    background: #c084fc;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background: #a855f7;
+  }
+  
