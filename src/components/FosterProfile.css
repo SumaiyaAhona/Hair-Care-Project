@@ -1,0 +1,107 @@
+.foster-profile-container {
+    font-family: system-ui, sans-serif;
+    background-color: #f9fafb;
+    color: #111827;
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .profile-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-header h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+  }
+  
+  .agency-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+  }
+  
+  .agency-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #e5e7eb;
+  }
+  
+  .contact-info h3,
+  .past-appointments h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .contact-card {
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+  }
+  
+  .contact-card .label {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+  
+  .edit-icon {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.75rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+  }
+  
+  .past-appointments .appointment-card {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    gap: 1rem;
+  }
+  
+  .past-appointments .icon {
+    font-size: 1.5rem;
+  }
+  
+  .past-appointments .service {
+    color: #6b7280;
+    font-size: 0.875rem;
+  }
+  
+  .past-appointments .date {
+    margin-left: auto;
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+  
+  .footer {
+    text-align: center;
+    font-size: 0.875rem;
+    color: #6b7280;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+    margin-top: 2rem;
+  }
+  
