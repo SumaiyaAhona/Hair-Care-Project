@@ -11,6 +11,7 @@ import VolunteerAppointments from './components/VolunteerAppointments';
 import VolunteerProfile from './components/VolunteerProfile';
 import FosterSignup from './components/FosterSignup';
 import HelpCenter from './components/HelpCenter';
+import ContactPage from './components/ContactPage';
 import Login from './components/Login';
 import Footer from './components/Footer';
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/foster/profile" element={<FosterProfile />} />
           <Route path="/volunteer/appointments" element={<VolunteerAppointments />} />
           <Route path="/volunteer/profile" element={<VolunteerProfile />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/helpcenter" element={<HelpCenter/>} />
         </Routes>
         <Footer />
