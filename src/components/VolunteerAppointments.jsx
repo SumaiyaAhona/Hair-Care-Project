@@ -6,7 +6,7 @@ function VolunteerAppointments() {
   return (
     <div className="volunteer-appointments">
       <div className="header">
-        <h2>Browse Appointments</h2>
+        <h2>Browse Hair Appointments</h2>
         <div className="header-links">
           <Link to="/volunteer/signup">Back</Link>
           <Link to="/volunteer/profile">Profile</Link>
@@ -19,57 +19,60 @@ function VolunteerAppointments() {
           <div className="appointment-item">
             <img src="/calendar-icon.png" alt="calendar" />
             <div>
-              <strong>Appointment with Dr. Smith</strong>
-              <p>Location: City Clinic</p>
+              <strong>Braids for Jamila</strong>
+              <p>Location: Brooklyn Foster Agency</p>
             </div>
             <div className="datetime">
-              <p><strong>Date:</strong> 10th Oct, 2023</p>
-              <p><strong>Time:</strong> 10:00 AM</p>
-            </div>
-          </div>
-          <div className="appointment-item">
-            <img src="/calendar-icon.png" alt="calendar" />
-            <div>
-              <strong>Appointment with Dr. Johnson</strong>
-              <p>Location: Downtown Med Center</p>
-            </div>
-            <div className="datetime">
-              <p><strong>Date:</strong> 11th Oct, 2023</p>
+              <p><strong>Date:</strong> July 18, 2025</p>
               <p><strong>Time:</strong> 2:00 PM</p>
             </div>
           </div>
+
           <div className="appointment-item">
             <img src="/calendar-icon.png" alt="calendar" />
             <div>
-              <strong>Appointment with Dr. Lee</strong>
-              <p>Location: Health Hub</p>
+              <strong>Curl Set for Myles</strong>
+              <p>Location: Home Visit – Bronx</p>
             </div>
             <div className="datetime">
-              <p><strong>Date:</strong> 12th Oct, 2023</p>
-              <p><strong>Time:</strong> 1:00 PM</p>
+              <p><strong>Date:</strong> July 20, 2025</p>
+              <p><strong>Time:</strong> 11:00 AM</p>
+            </div>
+          </div>
+
+          <div className="appointment-item">
+            <img src="/calendar-icon.png" alt="calendar" />
+            <div>
+              <strong>Wash & Detangle for Zoe</strong>
+              <p>Location: Manhattan Youth Center</p>
+            </div>
+            <div className="datetime">
+              <p><strong>Date:</strong> July 22, 2025</p>
+              <p><strong>Time:</strong> 3:30 PM</p>
             </div>
           </div>
         </div>
       </section>
 
       <section>
-        <h3>Upcoming Appointments</h3>
+        <h3>My Upcoming Appointments</h3>
         <div className="appointment-list">
           <div className="appointment-item">
             <img src="/calendar-icon.png" alt="calendar" />
             <div>
-              <strong>Appointment 1</strong>
-              <p>Date & Time: 10/05/2023 10:00 AM</p>
+              <strong>Twist Out for Isaiah</strong>
+              <p>Date & Time: July 15, 2025 @ 1:00 PM</p>
             </div>
-            <p><strong>Child’s ID:</strong> A123</p>
+            <p><strong>Child’s ID:</strong> #C872</p>
           </div>
+
           <div className="appointment-item">
             <img src="/calendar-icon.png" alt="calendar" />
             <div>
-              <strong>Appointment 2</strong>
-              <p>Date & Time: 10/06/2023 2:00 PM</p>
+              <strong>Protective Style for Layla</strong>
+              <p>Date & Time: July 16, 2025 @ 10:00 AM</p>
             </div>
-            <p><strong>Child’s ID:</strong> B456</p>
+            <p><strong>Child’s ID:</strong> #B223</p>
           </div>
         </div>
       </section>
