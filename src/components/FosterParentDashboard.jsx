@@ -1,11 +1,26 @@
 import './FosterParentDashboard.css';
+import { useNavigate } from 'react-router-dom';
 
 export default function FosterParentDashboard() {
+  const navigate = useNavigate();
+
+  const handleBack = () => {
+    navigate('/login');
+  };
+
+  const handleProfile = () => {
+    navigate('/foster/profile');
+  };
+
   return (
     <div className="dashboard">
       <header className="dashboard-header">
         <h1>Welcome, [Foster Parent Name]</h1>
         <p>Manage appointments and services for children in care.</p>
+        <div className="dashboard-buttons">
+          <button onClick={handleBack}>Back</button>
+          <button onClick={handleProfile}>Profile</button>
+        </div>
       </header>
 
       <section className="children-section">
