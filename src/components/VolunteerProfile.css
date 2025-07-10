@@ -1,0 +1,82 @@
+.volunteer-profile-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: system-ui, sans-serif;
+    color: #1f2937;
+  }
+  
+  .profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1rem;
+  }
+  
+  .nav-buttons button {
+    background: none;
+    border: none;
+    color: #4b5563;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .profile-section .profile-overview {
+    margin-bottom: 3rem;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-img-placeholder {
+    width: 70px;
+    height: 70px;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+  }
+  
+  .profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .detail-box {
+    flex: 1 1 200px;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #f9fafb;
+    text-align: center;
+  }
+  
+  .detail-box img {
+    width: 32px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .tracker-section {
+    text-align: center;
+  }
+  
+  .tracker-box {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.5rem;
+    background-color: #f3f4f6;
+  }
+  
+  .tracker-box h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
