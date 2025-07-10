@@ -1,16 +1,19 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
   return (
-    <header className="navbar">
-      <nav>
-        <ul>
-          <li><a href="#contact">Contact Us</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Hair Services</a></li>
-          <li><a href="#help">Help Center</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <Link to="/">Hair for Those in Care</Link>
+      </div>
+      <ul className="navbar-links">
+        <li><Link to="/contact">Contact Us</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/services">Hair Services</Link></li>
+        <li><Link to="/helpcenter">Help Center</Link></li>
+      </ul>
+    </nav>
   );
 }
