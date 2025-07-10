@@ -5,7 +5,7 @@ import Testimonials from './components/Testimonials';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Volunteer from './components/Volunteer';
 import SignUp from './components/Signup'; 
-import ContactForm from './components/ContactForm'
+import FosterParentDashboard from './components/FosterParentDashboard';
 
 
 
@@ -19,11 +19,11 @@ function App() {
             <>
               <Hero />
               <Testimonials />
-              <ContactForm />
             </>
           } />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/signup" element={<SignUp />} />   {/* ← new route */}
+          <Route path="/dashboard" element={<FosterParentDashboard />} />
         </Routes>
       </div>
     </Router>
