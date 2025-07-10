@@ -20,7 +20,6 @@ export default function Login() {
           <small>Make it secure!</small>
 
           <div className="login-buttons">
-            <button type="button" className="btn-secondary">Forgot Password?</button>
             <button type="submit" className="btn-primary">Login</button>
           </div>
         </form>
