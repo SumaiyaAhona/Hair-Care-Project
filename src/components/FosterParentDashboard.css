@@ -1,0 +1,71 @@
+.dashboard {
+    padding: 2rem;
+    font-family: system-ui, sans-serif;
+    color: #1f2937;
+  }
+  
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .children-section,
+  .appointment-form,
+  .upcoming-appointments,
+  .past-appointments {
+    margin-bottom: 2.5rem;
+  }
+  
+  .children-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .child-card {
+    background-color: #f9fafb;
+    padding: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    min-width: 180px;
+    text-align: center;
+  }
+  
+  .child-card.confirmed {
+    border-left: 4px solid #10b981;
+  }
+  
+  .child-card.pending {
+    border-left: 4px solid #f59e0b;
+  }
+  
+  .appointment-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .appointment-form input,
+  .appointment-form select,
+  .appointment-form button {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+  }
+  
+  .appointment-form button {
+    background-color: #c084fc;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .appointment-form button:hover {
+    background-color: #a855f7;
+  }
+  

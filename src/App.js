@@ -1,13 +1,13 @@
+// src/App.js
 import './App.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Testimonials from './components/Testimonials';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Volunteer from './components/Volunteer';
+import SignUp from './components/Signup';
+import FosterParentDashboard from './components/FosterParentDashboard';
 import Footer from './components/Footer';
-import HelpCenter from './components/HelpCenter';
-
-
 
 function App() {
   return (
@@ -15,15 +15,18 @@ function App() {
       <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={
-            <>
-              <Hero />
-              <Testimonials />
-              
-            </>
-          } />
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Testimonials />
+              </>
+            }
+          />
           <Route path="/volunteer" element={<Volunteer />} />
-          <Route path="/help" element={<HelpCenter />} />
+          <Route path="/signup"    element={<SignUp />} />
+          <Route path="/dashboard" element={<FosterParentDashboard />} />
         </Routes>
         <Footer />
       </div>
