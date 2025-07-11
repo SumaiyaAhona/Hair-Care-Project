@@ -1,8 +1,43 @@
 import './FosterParentDashboard.css';
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 
 export default function FosterParentDashboard() {
   const navigate = useNavigate();
+
+  const [appointments, setAppointments] = useState([
+    { child: 'Child 2', service: 'Curl Set', status: 'Pending volunteer match' },
+    { child: 'Child 3', service: 'Braid', status: 'Confirmed' },
+  ]);
+
+  const [formData, setFormData] = useState({
+    child: 'Child 1',
+    service: 'Braiding',
+    datetime: '',
+    location: '',
+    notes: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const newAppointment = {
+      child: formData.child,
+      service: formData.service,
+      status: 'Pending volunteer match'
+    };
+    setAppointments(prev => [...prev, newAppointment]);
+    setFormData({
+      child: 'Child 1',
+      service: 'Braiding',
+      datetime: '',
+      location: '',
+      notes: ''
+    });
+  };
 
   const handleBack = () => {
     navigate('/login');
@@ -35,20 +70,51 @@ export default function FosterParentDashboard() {
 
       <section className="appointment-form">
         <h2>Book New Appointment</h2>
-        <form>
-          <select><option>Child 1</option><option>Child 2</option></select>
-          <select><option>Braiding</option><option>Curl Set</option></select>
-          <input type="datetime-local" />
-          <input type="text" placeholder="Home, Agency, Salon" />
-          <input type="text" placeholder="e.g., prefers tight braids" />
+        <form onSubmit={handleSubmit}>
+          <select name="child" value={formData.child} onChange={handleChange}>
+            <option>Child 1</option>
+            <option>Child 2</option>
+            <option>Child 3</option>
+          </select>
+          <select name="service" value={formData.service} onChange={handleChange}>
+            <option>Braiding</option>
+            <option>Curl Set</option>
+            <option>Hair Wash</option>
+            <option>Twist Out</option>
+          </select>
+          <input
+            name="datetime"
+            type="datetime-local"
+            value={formData.datetime}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="location"
+            type="text"
+            placeholder="Home, Agency, Salon"
+            value={formData.location}
+            onChange={handleChange}
+            required
+          />
+          <input
+            name="notes"
+            type="text"
+            placeholder="e.g., prefers tight braids"
+            value={formData.notes}
+            onChange={handleChange}
+          />
           <button type="submit">Submit Appointment</button>
         </form>
       </section>
 
       <section className="upcoming-appointments">
         <h2>Upcoming Appointments</h2>
-        <div>Child 2 – Curl Set – <strong>Status: Pending volunteer match</strong></div>
-        <div>Child 3 – Braid – <strong>Status: Confirmed</strong></div>
+        {appointments.map((appt, idx) => (
+          <div key={idx}>
+            {appt.child} – {appt.service} – <strong>Status: {appt.status}</strong>
+          </div>
+        ))}
       </section>
 
       <section className="past-appointments">
